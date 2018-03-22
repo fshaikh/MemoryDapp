@@ -1,0 +1,2 @@
+1. How to add external JS libraries to Angular. 
+      ipfs-mini.js has been added under assets folder and included in index.html

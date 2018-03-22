@@ -1,0 +1,97 @@
+Dapp to save arbitrary text etched in time to Ethereum/IPFS
+
+Create a replica of : https://stone-dapp.firebaseapp.com/
+
+POC:
+1. Sample browser app to work with IPFS. Get a feel of how to save/retreive data to/from IPFS - DONE
+      Had to modify ipfs-mini.js. Use that version
+2. Create use cases and identify tech spikes
+      As a user, i should be able to use any Ethereum network (local/testnets/mainnet)
+      As a user , i should be able to submit text and view submission id
+      As auser , i should be able to fetch text using submission id
+      As a user, i should be able to view recent submissions on the network
+      As a user, i should be able to view status messages in a notification (error/success)
+3. Create a basic design diagram - DONE
+4. Start developing. - DONE
+5. Test/Deploy on local network
+6. Deploy to Testnets (ropsten/rinkeby)
+7. Deploy to PCF and github
+8. Hurray!!
+
+
+Setup:
+Infura provides hosted IPFS and access to testnets. Use it
+Front end in Angular 5
+
+Submit Memory - MF
+  Use cases:
+    As a user, should be able to store memory in IPFS
+       Read memory data from Submit form - DONE
+       Show submission price in UI (0.001 ETH) - DONE
+       Enable/Disable Submit button based on data entry - DONE
+       Save to IPFS - DONE
+       When save successful,show HTML5 notification message with hash - DONE
+
+       Build UI     
+       Validate memory data. If data is invalid show messages under each form field
+       Save to IPFS - error. Show error message as HTML5 notification
+       Show "in progress" indicator when saving to IPFS
+       Style the UI - Responsive
+       Write unit tests
+
+    As a user, should be able to store memory in Blockchain - Local
+       Create request object to be sent to smart contract - DONE
+       When successful, show HTML5 notification message - DONE
+       Navigate to Show Details route (i.e show the Submit memory with new state) - DONE
+
+       When unsuccessful, show error message as HTML5 notification
+       Build URL for transaction
+
+    As a user, should be able to view memory details
+       Create component(ts,css,html, add route, add to module) - DONE
+       Build UI  - DONE
+       Style the UI - Responsive - DONE
+
+View Memory Submission - MF
+   Use cases:
+      As a user, should be able to view submission using submission id
+         Implement smart contract function which returns submission given a submission id - DONE
+         Write tests for smart contract function - DONE
+         Implement FetchSubmission function in Web3Provider which returns data given submission id - DONE
+         Implement FetchData function in IPFSProvider which returns data given the hash - DONE
+         Implement SubmisionCard component - 
+         Implement ViewSubmision component (ts, html, css)  - DONE
+         Build UI
+         When user clicks on "View Submission", show View Submision UI
+         Show submission when user enters valid submission id and clicks "View"
+         Show error message when user enters invalid submission id(does not exist or invalid) and clicks "View"
+         Validate the submission id (must be number)
+         Enable/disable the View button
+         Show "in progress" indicator when fetching submission
+         Write unit tests
+
+View Latest Submisions - MF
+   Use cases
+     As a user, should be able to view latest submissions - DONE
+
+Implement Current network
+   show value
+   style it
+Handle all errors
+
+Miscellaneous:
+ Implement a function decorator which checks if the contract instance is blank before executing the function. Apply in Web3Provider
+ Refactor Web3Provider to make it generic - DONE
+ Move recent submissions logic in route resolver. Have written it but throwing errors. So understand those errors
+ Fix app route issue where app is shown twice - DONE
+ Design menu system - DONE
+ Implement menu system - DONE
+     Add icons (use font awesome)
+     Add styles (see reference design somewhere)
+ SCSS architecture
+    color, fonts, icons, etc
+ 
+Links:
+https://medium.com/@didil/off-chain-data-storage-ethereum-ipfs-570e030432cf - Medium article
+https://stone-dapp.firebaseapp.com/ - Hosted app
+https://github.com/SilentCicero/ipfs-mini - IPFS mini 

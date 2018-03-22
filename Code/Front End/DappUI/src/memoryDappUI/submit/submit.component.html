@@ -1,0 +1,47 @@
+<div class="container">
+    <h3>Submission Price: {{getSubmissionPrice()}} </h3>
+  <form [formGroup] ="formGroup">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text"
+               class="form-control"
+               id="name"
+               placeholder="Enter name"
+               formControlName="name">
+        <span class="help-block" *ngIf="nameValidationMessage">
+                  {{nameValidationMessage}}
+        </span>
+      </div>
+
+      <!-- Title -->
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text"
+               class="form-control"
+               id="title"
+               placeholder="Enter Title"
+               formControlName="title">
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+          <label for="data">Enter Your Text</label>
+          <textarea type="data" class="form-control" id="data" formControlName="data"></textarea>
+      </div>
+      
+      <button type="button"
+              class="btn btn-primary pull-right"
+              id="submitMemoryBtn"
+              [disabled]="!isStateValid()"
+              (click)="submitMemory($event)">Etch Memory</button>
+  </form>
+  <br>
+  <br>
+  <submission-details *ngIf="TxResponse" [TxResponse]="TxResponse"></submission-details>
+</div>
+
+  
+
+
+

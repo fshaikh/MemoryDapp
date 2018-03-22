@@ -1,0 +1,22 @@
+<div class="container">
+  <form [formGroup]="_formGroup">
+    <div class="form-group">
+      <label for="submissionId">Enter Submission Id</label>
+      <input type="number"
+             id="submissionId"
+             formControlName="submissionId"
+             class="form-control"
+      />
+    </div>
+
+    <button type="button"
+              class="btn btn-primary pull-right"
+              id="viewMemoryBtn"
+              [disabled]="!isValid()"
+              (click)="viewMemory($event)">View Memory
+    </button>
+  </form>
+
+  <br>
+  <submissions [Submissions] = "Submissions"></submissions>
+</div>

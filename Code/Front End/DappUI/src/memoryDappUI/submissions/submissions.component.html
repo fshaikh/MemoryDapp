@@ -1,0 +1,9 @@
+<!-- <ul class="submissions-container">
+    <li class="submission-container" *ngFor="let submission of Submissions">
+        <submission-card [SubmissionInfo] = "submission"></submission-card>
+    </li>
+</ul> -->
+
+<div class="card-deck" *ngFor="let submission of Submissions">
+    <submission-card [SubmissionInfo] = "submission"></submission-card>
+</div>

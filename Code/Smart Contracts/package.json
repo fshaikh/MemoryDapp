@@ -1,0 +1,11 @@
+{
+    "name": "memorydapp",
+    "version": "0.1.0", 
+    "author": "furqan shaikh",
+    "license": "ISC",
+    "devDependencies": {
+      "chai": "*",
+      "mocha": "*"
+    }
+  }
+  

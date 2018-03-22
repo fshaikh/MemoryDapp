@@ -1,0 +1,17 @@
+<div class="card card-container">
+  <div class="card-header">
+      Submission ID: {{SubmissionInfo.submissionResponse.submissionId}}
+      Name: {{SubmissionInfo.memoryInfo.name}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> {{SubmissionInfo.memoryInfo.title}}</h5>
+    <p class="card-text">{{SubmissionInfo.memoryInfo.data}}</p>
+  </div>
+  <div class="card-footer text-muted">
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{SubmissionInfo.submissionResponse.sender}}</li>
+          <li class="list-group-item">{{SubmissionInfo.submissionResponse.hashValue}}</li>
+          <li class="list-group-item">{{SubmissionInfo.submissionResponse.creationTimestamp | date}}</li>
+        </ul> 
+  </div>
+</div>

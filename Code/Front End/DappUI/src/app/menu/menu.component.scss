@@ -1,0 +1,14 @@
+@import '../../styles/core/_colors.scss';
+ul {
+    li{
+        margin:0.5em;
+        border-bottom: 0.05em solid $White;
+        a {
+            color: $White;
+        }
+        // Class to apply when router link is active
+        .active {
+            background-color: $LightBlue;
+        }
+    }
+}

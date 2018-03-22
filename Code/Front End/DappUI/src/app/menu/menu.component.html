@@ -1,0 +1,6 @@
+<ul class="navbar-nav flex-column" *ngIf="menu">
+  <li class="nav-item" *ngFor="let menuItem of menu">
+    <a class="nav-link" [routerLink]="getRoute(menuItem)" routerLinkActive="active">{{menuItem.title}}</a>
+  </li>
+</ul>
+
