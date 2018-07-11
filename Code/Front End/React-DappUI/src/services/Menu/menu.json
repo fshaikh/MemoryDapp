@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "title": "Submit Memory",
+        "icon": "",
+        "order": 1,
+        "route": "submit"
+    },
+    {
+        "id": "2",
+        "title": "Fetch Memory",
+        "icon": "",
+        "order": 2,
+        "route": "view"
+    },
+    {
+        "id": "3",
+        "title": "View Memories",
+        "icon": "",
+        "order": 3,
+        "route": "latest"
+    },
+    {
+        "id": "4",
+        "title": "Info",
+        "icon": "",
+        "order": 4,
+        "route": "info"
+    }
+]

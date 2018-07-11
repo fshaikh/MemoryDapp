@@ -1,0 +1,15 @@
+html, body{
+  height: 100%;
+}
+
+.app-container{
+  height:90%;
+}
+#root{
+  height: 100%;
+}
+.menu {
+        border-style: solid;
+        height: 100%;
+        background-color:green;
+    }

@@ -1,0 +1,13 @@
+.card {
+  margin: 0.5em;
+  width: 50%;
+}
+
+.card-title,
+.card-text {
+  color: black;
+}
+
+.card-header {
+  background-color: black !important;
+}

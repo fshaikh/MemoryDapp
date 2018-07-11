@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+/ Save to IPFs firstimport { Injectable } from "@angular/core";
 import { IPFSService } from "../IPFS/ipfs.service";
 import { SubmissionResponse } from "../../Models/Ethereum/SubmissionResponse";
 import { SubmissionRequest } from "../../Models/Ethereum/SubmissionRequest";

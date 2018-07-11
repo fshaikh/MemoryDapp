@@ -4,7 +4,9 @@ build/
 Code/Front End/DappUI/build/
 Code/Front End/DappUI/node_modules/
 Code/Front End/DappUI/node_modules/
+Code/Front End/React-DappUI/node_modules
 Code/Proxy Server/node_modules/
 Code/Smart Contracts/node_modules/
 Code/Smart Contracts/build/
+
 
